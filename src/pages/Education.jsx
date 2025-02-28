@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const educationData = [
-  { title: "Baccalauréat en Science Mathématiques Option A", year: "2019 – 2020", description: "Lycée Mohamed 6 Alnif-Tinghir" },
-  { title: "Bac+1 Sciences Mathématiques, Informatique et Application", year: "2020 – 2021", description: "Faculté Polydisciplinaire, Ouarzazate" },
-  { title: "Baccalauréat en Science expérimental", year: "2020 – 2021", description: "Option Science Physique (Libre), Tinghir" },
-  { title: "Diplôme d'Étude Universitaires Scientifiques et Techniques en Mathématique-Informatique-Physique", year: "2023 – 2024", description: "Faculté des Sciences et technique, Errachidia" },
-  { title: "Licence En Sciences et Technique Genie Logiciel LSTGL", year: "2023 – 2024", description: "Faculté des Sciences et technique, Errachidia" },
-  { title: "Licence fondamentale Sciences Mathématiques Informatique (En cours L3)", year: "2024", description: "Faculté Polydisciplinaire, Ouarzazate" },
-  { title: "Master en Sciences et Technique Systèmes d'Information Décisionnel et Imagerie (En cours M1)", year: "2024", description: "Faculté des Sciences et technique, Errachidia" },
+  { title: "Bachelor's Degree in Mathematical Sciences Option A", year: "2019 – 2020", description: "Mohamed 6 High School, Alnif-Tinghir" },
+  { title: "First-Year Degree in Mathematical Sciences, Computer Science, and Applications", year: "2020 – 2021", description: "Polydisciplinary Faculty, Ouarzazate" },
+  { title: "Bachelor's Degree in Experimental Science", year: "2020 – 2021", description: "Physics Science Option (Independent), Tinghir" },
+  { title: "University Scientific and Technical Studies Diploma in Mathematics-Computer Science-Physics", year: "2023 – 2024", description: "Faculty of Sciences and Technology, Errachidia" },
+  { title: "Bachelor's Degree in Software Engineering", year: "2023 – 2024", description: "Faculty of Sciences and Technology, Errachidia" },
+  { title: "Fundamental Bachelor's Degree in Mathematical and Computer Science (Ongoing L3)", year: "2024", description: "Polydisciplinary Faculty, Ouarzazate" },
+  { title: "Master's Degree in Decision Support Information Systems and Imaging (Ongoing M1)", year: "2024", description: "Faculty of Sciences and Technology, Errachidia" },
 ];
 
 const TimelineItem = ({ title, year, description, isEven }) => (
@@ -56,8 +56,8 @@ function Education() {
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold text-center mb-20 text-gray-800"
         >
-          Parcours Académique
-          <span className="block mt-2 text-2xl text-yellow-500">Mon chemin d'apprentissage</span>
+          Academic Background
+          <span className="block mt-2 text-2xl text-yellow-500">My Learning Journey</span>
         </motion.h2>
 
         <div className="relative">

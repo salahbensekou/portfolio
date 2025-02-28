@@ -13,7 +13,7 @@ function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen p-6 md:p-20">
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen px-6 py-15 md:p-20">
       <motion.div
         className="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left"
         initial={{ opacity: 0, x: -50 }}
@@ -27,7 +27,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Software Developer & Data Scientist
+          Software Developer & Data Scientist & AI
         </motion.span>
 
         {/* Titre principal */}

@@ -30,7 +30,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
       if (data.success) {
         Swal.fire({
           title: "Succès!",
-          text: "Message envoyé avec succès!",
+          text: "Message sent successfully!",
           icon: "success",
           confirmButtonColor: "#f59e0b",
         });
@@ -38,7 +38,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
       } else {
         Swal.fire({
           title: "Erreur!",
-          text: "Une erreur est survenue. Veuillez réessayer.",
+          text: "An error occurred. Please try again.",
           icon: "error",
           confirmButtonColor: "#f59e0b",
         });
@@ -46,7 +46,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
     } catch (error) {
       Swal.fire({
         title: "Erreur!",
-        text: "Impossible de contacter le serveur.",
+        text: "Unable to contact the server.",
         icon: "error",
         confirmButtonColor: "#f59e0b",
       });
@@ -77,13 +77,13 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
           <div className="relative mb-6">
             <UserCircleIcon className="w-6 h-6 absolute left-3 top-13 transform -translate-y-1/2 text-gray-400" />
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Nom
+            Name
             </label>
             <input
               type="text"
               name="name"
               className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
-              placeholder="Votre nom"
+              placeholder="Your name"
               required
             />
           </div>
@@ -92,13 +92,13 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
           <div className="relative mb-6">
             <EnvelopeIcon className="w-6 h-6 absolute left-3 top-13 transform -translate-y-1/2 text-gray-400" />
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email
+              E-mail
             </label>
             <input
               type="email"
               name="email"
               className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
-              placeholder="exemple@email.com"
+              placeholder="example@email.com"
               required
             />
           </div>
@@ -113,7 +113,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
               name="message"
               rows={4}
               className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
-              placeholder="Écrivez votre message ici..."
+              placeholder="Write your message here..."
               required
             ></textarea>
           </div>
@@ -130,10 +130,10 @@ const API_KEY = import.meta.env.VITE_API_KEY;export default function Contact() {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                 </svg>
-                Envoi en cours...
+                Sending...
               </span>
             ) : (
-              "Envoyer le message"
+              "Send message"
             )}
           </button>
         </form>

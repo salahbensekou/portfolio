@@ -1,39 +1,40 @@
 import { motion } from 'framer-motion';
-import { CodeBracketIcon, DevicePhoneMobileIcon, ServerIcon, BookOpenIcon, CpuChipIcon, BriefcaseIcon, CommandLineIcon } from '@heroicons/react/24/outline';
+import { CodeBracketIcon, DevicePhoneMobileIcon, ServerIcon, BookOpenIcon, CpuChipIcon, CommandLineIcon } from '@heroicons/react/24/outline';
 import React from 'react';
+
 const skillsData = [
   {
-    title: 'Développement mobile',
+    title: 'Mobile Development',
     icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
     color: 'border-blue-500',
     items: ['Flutter', 'Dart', 'Firebase', 'Riverpod', 'Java/Xml']
   },
   {
-    title: 'Développement Web',
+    title: 'Web Development',
     icon: <CodeBracketIcon className="w-8 h-8" />,
     color: 'border-green-500',
     items: ['PHP', 'HTML', 'CSS', 'JavaScript']
   },
   {
-    title: 'Base de données',
+    title: 'Databases',
     icon: <ServerIcon className="w-8 h-8" />,
     color: 'border-purple-500',
     items: ['Firestore', 'Oracle', 'MySQL', 'SQL', 'SQLite', 'Talend']
   },
   {
-    title: 'Environnements de développement',
+    title: 'Development Environments',
     icon: <CpuChipIcon className="w-8 h-8" />,
     color: 'border-red-500',
     items: ['VS Code', 'Eclipse', 'CodeBlocks', 'Android Studio']
   },
   {
-    title: 'Programmation',
+    title: 'Programming',
     icon: <CommandLineIcon className="w-8 h-8" />,
     color: 'border-yellow-500',
     items: ['Java', 'Python', 'C', 'PHP', 'SQL']
   },
   {
-    title: 'Modélisation',
+    title: 'Modeling',
     icon: <BookOpenIcon className="w-8 h-8" />,
     color: 'border-pink-500',
     items: ['UML', 'MERISE']
@@ -62,50 +63,50 @@ const Skills = () => {
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-4xl  font-bold text-gray-800 mb-12 text-center relative"
-        >
-        Compétences
+        className="text-4xl font-bold text-gray-800 mb-12 text-center relative"
+      >
+        Skills
         <motion.span
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="absolute -bottom-2 left-1/2 w-1/3 h-1 bg-yellow-500 transform -translate-x-1/2 rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="absolute -bottom-2 left-1/2 w-1/3 h-1 bg-yellow-500 transform -translate-x-1/2 rounded-full"
         />
-        </motion.h2>
+      </motion.h2>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {skillsData.map((skill, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
-              whileHover={{ scale: 1.03 }}
-            >
-              <div className={`border-l-4 ${skill.color} pl-4 mb-4 flex items-center gap-3`}>
-                {skill.icon}
-                <h3 className="text-xl font-semibold text-gray-800 group-hover:text-yellow-500 transition-colors">{skill.title}</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {skill.items.map((item, i) => (
-                    <motion.span
-                    key={i}
-                    whileHover={{ scale: 1.1, backgroundColor: "#f59e0b", color: "white" }}
-                    className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm transition-colors cursor-default"
-                    >
-                    {item}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {skillsData.map((skill, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+            whileHover={{ scale: 1.03 }}
+          >
+            <div className={`border-l-4 ${skill.color} pl-4 mb-4 flex items-center gap-3`}>
+              {skill.icon}
+              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-yellow-500 transition-colors">{skill.title}</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {skill.items.map((item, i) => (
+                <motion.span
+                  key={i}
+                  whileHover={{ scale: 1.1, backgroundColor: "#f59e0b", color: "white" }}
+                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm transition-colors cursor-default"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
   );
 };
 

@@ -1,21 +1,21 @@
-import React from "react";
+import React from "react"; 
 import { motion } from "framer-motion";
 
 const experienceData = [
   {
-    title: "Mise en place d’un SID pour l’Analyse du Tourisme dans la Région d’Errachidia et Midelt",
+    title: "Implementation of a Decision Support System for Tourism Analysis in the Errachidia and Midelt Region",
     year: "01/2025 – 02/2025",
-    description: "Faculté des Sciences et technique, Errachidia, Morocco. Conception d’un Data Warehouse et d’un tableau de bord interactif en utilisant Talend (ETL), MySQL et Power BI pour analyser les flux touristiques et améliorer la prise de décision.",
+    description: "Faculty of Science and Technology, Errachidia, Morocco. Design of a Data Warehouse and an interactive dashboard using Talend (ETL), MySQL, and Power BI to analyze tourism flows and improve decision-making.",
   },
   {
-    title: "ENQUÊTEUR DE TERRAIN – RGPH 2024",
+    title: "FIELD SURVEYOR – 2024 General Population and Housing Census",
     year: "08/2024 – 09/2024",
-    description: "Recensement Général de la Population et de l'Habitat 2024 (RGPH), Alnif, Morocco. Participation au Recensement Général de la Population et de l’Habitat 2024, avec collecte et saisie de données démographiques sur le terrain, en assurant la fiabilité des informations recueillies.",
+    description: "2024 General Population and Housing Census (RGPH), Alnif, Morocco. Participation in the census by collecting and entering demographic data in the field, ensuring the accuracy of the gathered information.",
   },
   {
-    title: "PROJET DE FIN D'ÉTUDE",
+    title: "FINAL YEAR PROJECT",
     year: "02/2024 – 06/2024",
-    description: "Faculté des Sciences et technique, Errachidia, Morocco. Développement d'ALLONAS, une application mobile de réseau social basée sur la localisation, utilisant Flutter, Dart, Firestore, NodeJS et Riverpod.",
+    description: "Faculty of Science and Technology, Errachidia, Morocco. Development of ALLONAS, a location-based social networking mobile application using Flutter, Dart, Firestore, NodeJS, and Riverpod.",
   },
 ];
 
@@ -64,7 +64,7 @@ function Experience() {
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold text-center mb-20 text-gray-800"
         >
-          Expériences professionnelles
+          Professional Experience
         </motion.h2>
 
         <div className="relative">

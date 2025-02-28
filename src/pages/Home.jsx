@@ -5,7 +5,6 @@ import Profile from "../assets/Profile.png";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 
 function Home() {
-
   const handleDownload = () => {
     const cvLink = document.createElement('a');
     cvLink.href = '/CV_Salah.pdf'; // Chemin vers le fichier dans le dossier public
@@ -28,7 +27,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          UI/UX Designer
+          Software Developer & Data Scientist
         </motion.span>
 
         {/* Titre principal */}
@@ -38,7 +37,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Hello, my name is <br />
+          Hello, I'm <br />
           <span className="text-[#fdc435]">Salaheddine Ben Sekou</span>
         </motion.h1>
 
@@ -49,8 +48,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.5 }}
         >
-          Short text with details about you, what you do or your professional career.
-          You can add more information on the about page.
+          Passionate about technology and innovation, I am pursuing a Master's in Decision Information Systems and Imaging, with a Bachelor's in Software Engineering. My expertise lies in software development, data science, and AI, with hands-on experience in mobile app development, data analysis, and decision support systems. Currently seeking a Summer 2025 internship in Data Science or AI to contribute to impactful projects and expand my skills.
         </motion.p>
 
         {/* Boutons d'action */}
@@ -61,7 +59,8 @@ function Home() {
             whileTap={{ scale: 0.95 }}
             onClick={handleDownload}
           >
-            <p className="">CV</p> <IoCloudDownloadOutline className="my-auto" />
+            <p>Download CV</p>
+            <IoCloudDownloadOutline className="my-auto" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/salaheddine-ben-sekou-6a4bb22a0/"
@@ -75,8 +74,9 @@ function Home() {
           </motion.a>
         </div>
       </motion.div>
+
       <motion.div
-        className="w-full flex justify-center md:justify-end mt-10 md:mt-0 relative"
+        className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0 relative"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -86,6 +86,7 @@ function Home() {
           src={image}
           alt="Background"
           className="absolute w-[90%] md:w-[70%] lg:w-[60%] h-auto max-w-[500px] object-contain"
+          loading="lazy"
         />
 
         {/* Image de profil */}
@@ -93,10 +94,12 @@ function Home() {
           src={Profile}
           alt="Profile"
           className="relative w-[65%] md:w-[45%] lg:w-[35%] h-auto max-w-[300px] rounded-full shadow-lg"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           whileHover={{ scale: 1.05 }}
         />
       </motion.div>
-
     </div>
   );
 }

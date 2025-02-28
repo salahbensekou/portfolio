@@ -39,7 +39,7 @@ function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://github.com/salahbensekou"
               aria-label="GitHub"
               className="text-gray-800 hover:text-gray-600 transition-colors duration-300"
             >
